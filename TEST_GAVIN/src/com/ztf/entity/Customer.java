@@ -1,5 +1,7 @@
 package com.ztf.entity;
 
+import java.util.ArrayList;
+
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -10,6 +12,9 @@ public class Customer {
 	String name;
 	int age;
 	int id;
+	
+	String address;
+	ArrayList<String> mobileNo;
 
 	public String getName() {
 		return name;
@@ -37,5 +42,24 @@ public class Customer {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	public String getAddress() {
+	    return address;
+	}
+
+	@XmlElement
+	public void setAddress(String address) {
+	    this.address = address;
+	}
+
+	public ArrayList<String> getMobileNo() {
+	    return mobileNo;
+	}
+
+	@XmlElement
+	public void setMobileNo(ArrayList<String> mobileNo) {
+	    this.mobileNo = mobileNo;
+	}
+
 
 }
